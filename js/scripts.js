@@ -28,15 +28,11 @@ $(function(){
     var noVowels = [];
 
     var quoteArray = quote1.split("");
-      // first loop through quoteArray that takes info from quote1
-      for (var i=0; i<quoteArray.length; i
-        // second loop using info from vowels
+
+      for (var i=0; i<quoteArray.length; i++){
         for(var k=0; k<vowels.length; k ++){
-          // if statement that asks if the variables from the for loops are equal
           if (quoteArray[i]===vowels[k]){
-            // stops the second for loop
             k=vowels.length;
-            // adds the dash to the current letter we are on using the i variable
             quoteArray[i] = "-";
 
           }
@@ -52,4 +48,26 @@ $(function(){
 
       });
       });
+
+        //Transportation Survey
+
+      $("form#transportation_survey").submit(function(event){
+        event.preventDefault();
+        $("#work-responses").show();
+        $("input:checkbox[name=work-transportation]:checked").each(function(){
+          var workTransportationMode = $(this).val();
+          $('#work-responses').append(workTransportationMode + "<br>");
+        });
+        $('#transportation_survey').hide();
+  });
+
+    $("#stressSurvey").submit(function(e){
+      e.preventDefault();
+      $("#stress-responses").show();
+      $("input:checkbox[name=stressInfo]:checked").each(function(){
+        var stressers = $(this).val();
+        $("#stress-responses").append(stressers + "<br>");
+      });
+      $("#stressSurvey").hide();
+    })
 });
