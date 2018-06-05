@@ -61,13 +61,13 @@ $(function(){
         $('#transportation_survey').hide();
   });
 
-    $("#stressSurvey").submit(function(e){
-      e.preventDefault();
-      $("#stress-responses").show();
+    $("form#stressSurvey").submit(function(event){
+      event.preventDefault();
+      $("#stressResponses").show();
       $("input:checkbox[name=stressInfo]:checked").each(function(){
-        var stressers = $(this).val();
-        $("#stress-responses").append(stressers + "<br>");
+        var stress = $(this).val();
+        $('#stressResponses').append(stress + "<br>");
       });
-      $("#stressSurvey").hide();
-    })
+      $('#stressSurvey').hide();
+});
 });
