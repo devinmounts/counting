@@ -23,7 +23,7 @@ $(function(){
 
   $("#wordShow").click(function(e){
     e.preventDefault()
-    var quote1 = ("We go together like cocaine and waffles. — Cal Naughton Jr.")
+    var quote1 = ("We go together like cocaine and waffles.")
     var vowels = ["a", "e", "i", "o", "u", "y"]
     var noVowels = [];
 
@@ -39,6 +39,13 @@ $(function(){
         }
       }
       console.log(quoteArray);
-  });
+      var finalQuote = quoteArray.join("");
 
+      $("#blankOutput").prepend("<li>"+ finalQuote + "</li>");
+
+      $("#quoteShow").click(function(){
+      $("#quoteOutput").prepend("<li>"+ quote1 + "</li>");
+
+      });
+      });
 });
