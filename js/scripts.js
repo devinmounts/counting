@@ -20,14 +20,27 @@ $(function(){
 
   // Word Puzzle
 // We go together like cocaine and waffles.
-var quote1 = ["We go together like cocaine and waffles."]
-var vowels = ["a", "e", "i", "o", "u", "y"]
-var noVowels = [];
+
+  $("#wordShow").click(function(e){
+    e.preventDefault()
+    var quote1 = ('"We go together like cocaine and waffles."')
+    var vowels = ["a", "e", "i", "o", "u", "y"]
+    var noVowels = [];
+
+    var quoteArray = quote1.split("");
+    console.log(quoteArray);
+      for (var index=0; index<=quoteArray; index +=1){
+
+
+        }
+  });
+
+    // $(".quote").prepend("<h3>"+ quote1 + "</h3>");
+    // // $("#quoteShow").(quote1);
 
 
 
-quote1.indexOf(vowels);
-console.log(vowels);
+
 
 
 
