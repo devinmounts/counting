@@ -23,20 +23,18 @@ $(function(){
 
   $("#wordShow").click(function(e){
     e.preventDefault()
-    var quote1 = ('"We go together like cocaine and waffles."')
+    var quote1 = ('"Hello"')
     var vowels = ["a", "e", "i", "o", "u", "y"]
     var noVowels = [];
 
     var quoteArray = quote1.split("");
-    console.log(quoteArray);
-      for (var index=0; index<=quoteArray; index +=1){
 
-
+      for (var i=0; i<=quoteArray.length; i +=1){
+        for(var k=0; k<=vowels.length; k +=1){
+          if (i===k) i = "-";
         }
+      }
   });
-
-    // $(".quote").prepend("<h3>"+ quote1 + "</h3>");
-    // // $("#quoteShow").(quote1);
 
 
 
