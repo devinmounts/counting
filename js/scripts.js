@@ -23,22 +23,22 @@ $(function(){
 
   $("#wordShow").click(function(e){
     e.preventDefault()
-    var quote1 = ("Hello")
+    var quote1 = ("We go together like cocaine and waffles. — Cal Naughton Jr.")
     var vowels = ["a", "e", "i", "o", "u", "y"]
     var noVowels = [];
 
     var quoteArray = quote1.split("");
 
-      for (var i=0; i<=quoteArray.length; i +=1){
-        for(var k=0; k<=vowels.length; k +=1){
+      for (var i=0; i<quoteArray.length; i ++){
+        for(var k=0; k<vowels.length; k ++){
           if (quoteArray[i]===vowels[k]){
-            vowels[k]=vowels.length;
+            k=vowels.length;
             quoteArray[i] = "-";
-          console.log(quoteArray);
+
           }
         }
       }
-
+      console.log(quoteArray);
   });
 
 });
