@@ -1,6 +1,6 @@
 $(function(){
 
-
+  // Count Numbers
   $("#submit").click(function(e){
     e.preventDefault()
     var initial = 0
@@ -14,12 +14,22 @@ $(function(){
       arrays.push(output);
     }
 
-    // console.log(output);
-      console.log(arrays);
       var finalArray= arrays.pop();
-      console.log(finalArray);
       $("#output").prepend("<li>"+ finalArray + "</li>");
   });
+
+  // Word Puzzle
+// We go together like cocaine and waffles.
+var quote1 = ["We go together like cocaine and waffles."]
+var vowels = ["a", "e", "i", "o", "u", "y"]
+var noVowels = [];
+
+
+
+quote1.indexOf(vowels);
+console.log(vowels);
+
+
 
 
 });
