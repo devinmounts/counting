@@ -28,11 +28,15 @@ $(function(){
     var noVowels = [];
 
     var quoteArray = quote1.split("");
-
-      for (var i=0; i<quoteArray.length; i ++){
+      // first loop through quoteArray that takes info from quote1
+      for (var i=0; i<quoteArray.length; i
+        // second loop using info from vowels
         for(var k=0; k<vowels.length; k ++){
+          // if statement that asks if the variables from the for loops are equal
           if (quoteArray[i]===vowels[k]){
+            // stops the second for loop
             k=vowels.length;
+            // adds the dash to the current letter we are on using the i variable
             quoteArray[i] = "-";
 
           }
