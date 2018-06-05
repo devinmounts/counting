@@ -32,7 +32,7 @@ $(function(){
       for (var i=0; i<quoteArray.length; i++){
         for(var k=0; k<vowels.length; k ++){
           if (quoteArray[i]===vowels[k]){
-            k=vowels.length;
+            // k=vowels.length;
             quoteArray[i] = "-";
 
           }
@@ -69,5 +69,6 @@ $(function(){
         $('#stressResponses').append(stress + "<br>");
       });
       $('#stressSurvey').hide();
+
 });
 });
