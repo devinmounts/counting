@@ -23,7 +23,7 @@ $(function(){
 
   $("#wordShow").click(function(e){
     e.preventDefault()
-    var quote1 = ('"Hello"')
+    var quote1 = ("Hello")
     var vowels = ["a", "e", "i", "o", "u", "y"]
     var noVowels = [];
 
@@ -31,16 +31,14 @@ $(function(){
 
       for (var i=0; i<=quoteArray.length; i +=1){
         for(var k=0; k<=vowels.length; k +=1){
-          if (i===k) i = "-";
+          if (quoteArray[i]===vowels[k]){
+            vowels[k]=vowels.length;
+            quoteArray[i] = "-";
+          console.log(quoteArray);
+          }
         }
       }
+
   });
-
-
-
-
-
-
-
 
 });
